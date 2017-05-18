@@ -237,7 +237,7 @@ export default class Balloon extends Component {
           height: '100%',
           zIndex,
           position: 'absolute',
-          pointerEvents: 'none',
+          pointerEvents: 'auto',
         }}
       >
         <Resizable
@@ -288,7 +288,7 @@ export default class Balloon extends Component {
           minHeight={ minHeight }
           minWidth={ minWidth }
         >
-          <div style={{ padding: '0px', width: '100%', height: '100%', pointerEvents: 'none' }}>
+          <div style={{ padding: '0px', width: '100%', height: '100%', pointerEvents: 'auto' }}>
             { children }
           </div>
         </Resizable>
@@ -317,7 +317,7 @@ export default class Balloon extends Component {
         >
           { marker }
         </Resizable>
-        <svg width="100%" height="100%" style={{ zIndex, pointerEvents: 'none' }}>
+        <svg width="100%" height="100%" style={{ zIndex, pointerEvents: 'auto' }}>
           <path
             d={ `M ${base[0].x} ${base[0].y}
                  Q ${control.x} ${control.y} ${destination.x} ${destination.y}
@@ -331,4 +331,3 @@ export default class Balloon extends Component {
     );
   }
 }
-
